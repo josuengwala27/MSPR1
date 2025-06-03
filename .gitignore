@@ -1,0 +1,23 @@
+# Environnement Python
+ETL/venv/
+__pycache__/
+*.pyc
+
+# Données générées
+ETL/processed/
+ETL/logs/
+
+# Environnement Node.js
+BDD/node_modules/
+
+# Fichiers de configuration sensibles
+BDD/.env
+
+# Fichiers temporaires
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks checkpoints
+ETL/notebooks/.ipynb_checkpoints/ 
