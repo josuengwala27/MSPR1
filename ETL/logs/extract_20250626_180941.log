@@ -1,0 +1,136 @@
+2025-06-26 18:09:41,161 - INFO - DEBUT DE L'EXTRACTION AUTOMATISEE
+2025-06-26 18:09:41,162 - INFO - Repertoire de destination: C:\Sources\MSPR\ETL\scripts\..\raw_data
+2025-06-26 18:09:41,162 - INFO - 
+============================================================
+2025-06-26 18:09:41,162 - INFO - EXTRACTION: Donnees COVID-19 Worldometer
+2025-06-26 18:09:41,162 - INFO - URL: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv
+2025-06-26 18:09:41,162 - INFO - Fichier: worldometer_coronavirus_daily_data.csv
+2025-06-26 18:09:41,162 - INFO - ============================================================
+2025-06-26 18:09:41,163 - INFO - Tentative 1/3 - Telechargement de worldometer_coronavirus_daily_data.csv
+2025-06-26 18:09:47,564 - WARNING - Type de contenu inattendu: text/plain; charset=utf-8
+2025-06-26 18:09:47,723 - INFO - Progression worldometer_coronavirus_daily_data.csv: 10.5%
+2025-06-26 18:09:47,748 - INFO - Progression worldometer_coronavirus_daily_data.csv: 21.1%
+2025-06-26 18:09:47,765 - INFO - Progression worldometer_coronavirus_daily_data.csv: 31.6%
+2025-06-26 18:09:47,810 - INFO - Progression worldometer_coronavirus_daily_data.csv: 42.1%
+2025-06-26 18:09:47,836 - INFO - Progression worldometer_coronavirus_daily_data.csv: 52.7%
+2025-06-26 18:09:47,867 - INFO - Progression worldometer_coronavirus_daily_data.csv: 63.2%
+2025-06-26 18:09:47,890 - INFO - Progression worldometer_coronavirus_daily_data.csv: 73.7%
+2025-06-26 18:09:47,903 - INFO - Progression worldometer_coronavirus_daily_data.csv: 84.3%
+2025-06-26 18:09:47,918 - INFO - Progression worldometer_coronavirus_daily_data.csv: 94.8%
+2025-06-26 18:09:47,932 - INFO - Progression worldometer_coronavirus_daily_data.csv: 105.3%
+2025-06-26 18:09:47,943 - INFO - Progression worldometer_coronavirus_daily_data.csv: 115.9%
+2025-06-26 18:09:47,958 - INFO - Progression worldometer_coronavirus_daily_data.csv: 126.4%
+2025-06-26 18:09:47,971 - INFO - Progression worldometer_coronavirus_daily_data.csv: 136.9%
+2025-06-26 18:09:47,982 - INFO - Progression worldometer_coronavirus_daily_data.csv: 147.4%
+2025-06-26 18:09:47,995 - INFO - Progression worldometer_coronavirus_daily_data.csv: 158.0%
+2025-06-26 18:09:48,002 - INFO - Progression worldometer_coronavirus_daily_data.csv: 168.5%
+2025-06-26 18:09:48,010 - INFO - Progression worldometer_coronavirus_daily_data.csv: 179.0%
+2025-06-26 18:09:48,018 - INFO - Progression worldometer_coronavirus_daily_data.csv: 189.6%
+2025-06-26 18:09:48,024 - INFO - Progression worldometer_coronavirus_daily_data.csv: 200.1%
+2025-06-26 18:09:48,030 - INFO - Progression worldometer_coronavirus_daily_data.csv: 210.6%
+2025-06-26 18:09:48,037 - INFO - Progression worldometer_coronavirus_daily_data.csv: 221.2%
+2025-06-26 18:09:48,046 - INFO - Progression worldometer_coronavirus_daily_data.csv: 231.7%
+2025-06-26 18:09:48,056 - INFO - Progression worldometer_coronavirus_daily_data.csv: 242.2%
+2025-06-26 18:09:48,072 - INFO - Progression worldometer_coronavirus_daily_data.csv: 252.8%
+2025-06-26 18:09:48,091 - INFO - Progression worldometer_coronavirus_daily_data.csv: 263.3%
+2025-06-26 18:09:48,115 - INFO - Progression worldometer_coronavirus_daily_data.csv: 273.8%
+2025-06-26 18:09:48,131 - INFO - Progression worldometer_coronavirus_daily_data.csv: 284.4%
+2025-06-26 18:09:48,139 - INFO - Progression worldometer_coronavirus_daily_data.csv: 294.9%
+2025-06-26 18:09:48,145 - INFO - Progression worldometer_coronavirus_daily_data.csv: 305.4%
+2025-06-26 18:09:48,154 - INFO - Progression worldometer_coronavirus_daily_data.csv: 316.0%
+2025-06-26 18:09:48,161 - INFO - Progression worldometer_coronavirus_daily_data.csv: 326.5%
+2025-06-26 18:09:48,170 - INFO - Progression worldometer_coronavirus_daily_data.csv: 337.0%
+2025-06-26 18:09:48,185 - INFO - Progression worldometer_coronavirus_daily_data.csv: 347.6%
+2025-06-26 18:09:48,195 - INFO - Progression worldometer_coronavirus_daily_data.csv: 358.1%
+2025-06-26 18:09:48,208 - INFO - Progression worldometer_coronavirus_daily_data.csv: 368.6%
+2025-06-26 18:09:48,217 - INFO - Progression worldometer_coronavirus_daily_data.csv: 379.2%
+2025-06-26 18:09:48,226 - INFO - Progression worldometer_coronavirus_daily_data.csv: 389.7%
+2025-06-26 18:09:48,234 - INFO - Progression worldometer_coronavirus_daily_data.csv: 400.2%
+2025-06-26 18:09:48,240 - INFO - Progression worldometer_coronavirus_daily_data.csv: 410.8%
+2025-06-26 18:09:48,249 - INFO - Progression worldometer_coronavirus_daily_data.csv: 421.3%
+2025-06-26 18:09:48,266 - INFO - Progression worldometer_coronavirus_daily_data.csv: 431.8%
+2025-06-26 18:09:48,274 - INFO - Progression worldometer_coronavirus_daily_data.csv: 442.3%
+2025-06-26 18:09:48,289 - INFO - Progression worldometer_coronavirus_daily_data.csv: 452.9%
+2025-06-26 18:09:48,310 - INFO - Progression worldometer_coronavirus_daily_data.csv: 463.4%
+2025-06-26 18:09:48,325 - INFO - Progression worldometer_coronavirus_daily_data.csv: 473.9%
+2025-06-26 18:09:48,343 - INFO - Progression worldometer_coronavirus_daily_data.csv: 484.5%
+2025-06-26 18:09:48,357 - INFO - Progression worldometer_coronavirus_daily_data.csv: 495.0%
+2025-06-26 18:09:48,374 - INFO - Progression worldometer_coronavirus_daily_data.csv: 505.5%
+2025-06-26 18:09:48,390 - INFO - Progression worldometer_coronavirus_daily_data.csv: 516.1%
+2025-06-26 18:09:48,399 - INFO - Progression worldometer_coronavirus_daily_data.csv: 526.6%
+2025-06-26 18:09:48,436 - INFO - Progression worldometer_coronavirus_daily_data.csv: 537.1%
+2025-06-26 18:09:48,452 - INFO - Progression worldometer_coronavirus_daily_data.csv: 547.7%
+2025-06-26 18:09:48,458 - INFO - Progression worldometer_coronavirus_daily_data.csv: 558.2%
+2025-06-26 18:09:48,465 - INFO - Progression worldometer_coronavirus_daily_data.csv: 568.7%
+2025-06-26 18:09:48,471 - INFO - Progression worldometer_coronavirus_daily_data.csv: 579.3%
+2025-06-26 18:09:48,476 - INFO - Progression worldometer_coronavirus_daily_data.csv: 589.8%
+2025-06-26 18:09:48,484 - INFO - Progression worldometer_coronavirus_daily_data.csv: 600.3%
+2025-06-26 18:09:48,488 - INFO - Progression worldometer_coronavirus_daily_data.csv: 610.9%
+2025-06-26 18:09:48,495 - INFO - Progression worldometer_coronavirus_daily_data.csv: 621.4%
+2025-06-26 18:09:48,501 - INFO - Progression worldometer_coronavirus_daily_data.csv: 631.9%
+2025-06-26 18:09:48,508 - INFO - Progression worldometer_coronavirus_daily_data.csv: 642.5%
+2025-06-26 18:09:48,516 - INFO - Progression worldometer_coronavirus_daily_data.csv: 653.0%
+2025-06-26 18:09:48,527 - INFO - Progression worldometer_coronavirus_daily_data.csv: 663.5%
+2025-06-26 18:09:48,538 - INFO - Progression worldometer_coronavirus_daily_data.csv: 674.1%
+2025-06-26 18:09:48,545 - INFO - Progression worldometer_coronavirus_daily_data.csv: 684.6%
+2025-06-26 18:09:48,553 - INFO - Progression worldometer_coronavirus_daily_data.csv: 695.1%
+2025-06-26 18:09:48,565 - INFO - Progression worldometer_coronavirus_daily_data.csv: 705.7%
+2025-06-26 18:09:48,573 - INFO - Progression worldometer_coronavirus_daily_data.csv: 716.2%
+2025-06-26 18:09:48,581 - INFO - Progression worldometer_coronavirus_daily_data.csv: 726.7%
+2025-06-26 18:09:48,588 - INFO - Progression worldometer_coronavirus_daily_data.csv: 737.2%
+2025-06-26 18:09:48,596 - INFO - Progression worldometer_coronavirus_daily_data.csv: 747.8%
+2025-06-26 18:09:48,607 - INFO - Progression worldometer_coronavirus_daily_data.csv: 758.3%
+2025-06-26 18:09:48,616 - INFO - Progression worldometer_coronavirus_daily_data.csv: 768.8%
+2025-06-26 18:09:48,622 - INFO - Progression worldometer_coronavirus_daily_data.csv: 779.4%
+2025-06-26 18:09:48,630 - INFO - Progression worldometer_coronavirus_daily_data.csv: 789.9%
+2025-06-26 18:09:48,637 - INFO - Progression worldometer_coronavirus_daily_data.csv: 800.4%
+2025-06-26 18:09:48,643 - INFO - Progression worldometer_coronavirus_daily_data.csv: 811.0%
+2025-06-26 18:09:48,651 - INFO - Progression worldometer_coronavirus_daily_data.csv: 821.5%
+2025-06-26 18:09:48,660 - INFO - Progression worldometer_coronavirus_daily_data.csv: 832.0%
+2025-06-26 18:09:48,667 - INFO - Progression worldometer_coronavirus_daily_data.csv: 842.6%
+2025-06-26 18:09:48,676 - INFO - Progression worldometer_coronavirus_daily_data.csv: 853.1%
+2025-06-26 18:09:48,684 - INFO - Progression worldometer_coronavirus_daily_data.csv: 863.6%
+2025-06-26 18:09:48,694 - INFO - Progression worldometer_coronavirus_daily_data.csv: 874.2%
+2025-06-26 18:09:48,700 - INFO - Progression worldometer_coronavirus_daily_data.csv: 884.7%
+2025-06-26 18:09:48,707 - INFO - Progression worldometer_coronavirus_daily_data.csv: 895.2%
+2025-06-26 18:09:48,714 - INFO - Progression worldometer_coronavirus_daily_data.csv: 905.8%
+2025-06-26 18:09:48,722 - INFO - Progression worldometer_coronavirus_daily_data.csv: 916.3%
+2025-06-26 18:09:48,731 - INFO - Progression worldometer_coronavirus_daily_data.csv: 926.8%
+2025-06-26 18:09:48,737 - INFO - Progression worldometer_coronavirus_daily_data.csv: 937.4%
+2025-06-26 18:09:48,742 - INFO - Progression worldometer_coronavirus_daily_data.csv: 947.9%
+2025-06-26 18:09:48,748 - INFO - Progression worldometer_coronavirus_daily_data.csv: 958.4%
+2025-06-26 18:09:48,754 - INFO - Progression worldometer_coronavirus_daily_data.csv: 969.0%
+2025-06-26 18:09:48,761 - INFO - Progression worldometer_coronavirus_daily_data.csv: 979.5%
+2025-06-26 18:09:48,769 - INFO - Telechargement reussi: worldometer_coronavirus_daily_data.csv
+2025-06-26 18:09:48,797 - INFO - Integrite verifiee pour worldometer_coronavirus_daily_data.csv (93.83MB)
+2025-06-26 18:09:49,026 - INFO - Checksum SHA-256: 8473d0f0fdf962e1ffbd5b85b18726fc96a49bab109e271186c339725a12b10c
+2025-06-26 18:09:49,026 - INFO - SUCCES: Donnees COVID-19 Worldometer - EXTRACTION REUSSIE
+2025-06-26 18:09:49,026 - INFO - 
+============================================================
+2025-06-26 18:09:49,027 - INFO - EXTRACTION: Donnees MPOX Our World in Data
+2025-06-26 18:09:49,027 - INFO - URL: https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv
+2025-06-26 18:09:49,027 - INFO - Fichier: owid-monkeypox-data.csv
+2025-06-26 18:09:49,027 - INFO - ============================================================
+2025-06-26 18:09:49,027 - INFO - Tentative 1/3 - Telechargement de owid-monkeypox-data.csv
+2025-06-26 18:09:50,059 - WARNING - Type de contenu inattendu: text/plain; charset=utf-8
+2025-06-26 18:09:50,126 - INFO - Progression owid-monkeypox-data.csv: 155.9%
+2025-06-26 18:09:50,140 - INFO - Progression owid-monkeypox-data.csv: 311.9%
+2025-06-26 18:09:50,179 - INFO - Progression owid-monkeypox-data.csv: 467.8%
+2025-06-26 18:09:50,197 - INFO - Progression owid-monkeypox-data.csv: 623.7%
+2025-06-26 18:09:50,217 - INFO - Progression owid-monkeypox-data.csv: 779.7%
+2025-06-26 18:09:50,228 - INFO - Progression owid-monkeypox-data.csv: 935.6%
+2025-06-26 18:09:50,242 - INFO - Progression owid-monkeypox-data.csv: 1091.5%
+2025-06-26 18:09:50,261 - INFO - Progression owid-monkeypox-data.csv: 1247.5%
+2025-06-26 18:09:50,269 - INFO - Progression owid-monkeypox-data.csv: 1403.4%
+2025-06-26 18:09:50,272 - INFO - Telechargement reussi: owid-monkeypox-data.csv
+2025-06-26 18:09:50,293 - INFO - Integrite verifiee pour owid-monkeypox-data.csv (9.26MB)
+2025-06-26 18:09:50,322 - INFO - Checksum SHA-256: 35b2f4ae3643c4e3539e6a92ef8eda7a6d82ef90d8280dae962204b5302a4ea7
+2025-06-26 18:09:50,323 - INFO - SUCCES: Donnees MPOX Our World in Data - EXTRACTION REUSSIE
+2025-06-26 18:09:50,323 - INFO - 
+============================================================
+2025-06-26 18:09:50,323 - INFO - RESUME DE L'EXTRACTION
+2025-06-26 18:09:50,323 - INFO - ============================================================
+2025-06-26 18:09:50,327 - INFO - Donnees COVID-19 Worldometer: REUSSI
+2025-06-26 18:09:50,332 - INFO - Donnees MPOX Our World in Data: REUSSI
+2025-06-26 18:09:50,332 - INFO - Temps total: 9.16 secondes
+2025-06-26 18:09:50,333 - INFO - EXTRACTION COMPLETE - TOUTES LES SOURCES TELECHARGEES

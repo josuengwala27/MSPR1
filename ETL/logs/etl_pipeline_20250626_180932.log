@@ -1,0 +1,330 @@
+2025-06-26 18:09:32,806 - INFO - DEBUT DU PIPELINE ETL COMPLET
+2025-06-26 18:09:32,807 - INFO - Horodatage: 2025-06-26 18:09:32
+2025-06-26 18:09:32,807 - INFO - VERIFICATION DES PREREQUIS
+2025-06-26 18:09:40,219 - INFO - Dependances Python installees
+2025-06-26 18:09:40,220 - INFO - Repertoire existant: ../raw_data
+2025-06-26 18:09:40,220 - INFO - Repertoire existant: ../processed
+2025-06-26 18:09:40,220 - INFO - Repertoire existant: ../logs
+2025-06-26 18:09:40,221 - INFO - 
+ETAPE: Extraction
+2025-06-26 18:09:40,223 - INFO - 
+============================================================
+2025-06-26 18:09:40,224 - INFO - EXECUTION: Extraction automatisee des donnees COVID-19 et MPOX
+2025-06-26 18:09:40,224 - INFO - Script: 01_extract.py
+2025-06-26 18:09:40,224 - INFO - ============================================================
+2025-06-26 18:09:50,492 - INFO - Sortie standard:
+2025-06-26 18:09:50,493 - INFO -   ================================================================================
+2025-06-26 18:09:50,494 - INFO -   EXTRACTEUR DE DONNEES PANDEMIQUES - MSPR PROJECT
+2025-06-26 18:09:50,494 - INFO -   ================================================================================
+2025-06-26 18:09:50,497 - INFO -   Sources configurees:
+2025-06-26 18:09:50,498 - INFO -     • Donnees COVID-19 Worldometer
+2025-06-26 18:09:50,498 - INFO -       Donnees quotidiennes COVID-19 par pays
+2025-06-26 18:09:50,522 - INFO -       URL: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv
+2025-06-26 18:09:50,528 - INFO -     • Donnees MPOX Our World in Data
+2025-06-26 18:09:50,535 - INFO -       Donnees quotidiennes MPOX par pays
+2025-06-26 18:09:50,536 - INFO -       URL: https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv
+2025-06-26 18:09:50,551 - INFO -   2025-06-26 18:09:41,161 - INFO - DEBUT DE L'EXTRACTION AUTOMATISEE
+2025-06-26 18:09:50,556 - INFO -   2025-06-26 18:09:41,162 - INFO - Repertoire de destination: C:\Sources\MSPR\ETL\scripts\..\raw_data
+2025-06-26 18:09:50,558 - INFO -   2025-06-26 18:09:41,162 - INFO - 
+2025-06-26 18:09:50,558 - INFO -   ============================================================
+2025-06-26 18:09:50,566 - INFO -   2025-06-26 18:09:41,162 - INFO - EXTRACTION: Donnees COVID-19 Worldometer
+2025-06-26 18:09:50,567 - INFO -   2025-06-26 18:09:41,162 - INFO - URL: https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv
+2025-06-26 18:09:50,569 - INFO -   2025-06-26 18:09:41,162 - INFO - Fichier: worldometer_coronavirus_daily_data.csv
+2025-06-26 18:09:50,569 - INFO -   2025-06-26 18:09:41,162 - INFO - ============================================================
+2025-06-26 18:09:50,572 - INFO -   2025-06-26 18:09:41,163 - INFO - Tentative 1/3 - Telechargement de worldometer_coronavirus_daily_data.csv
+2025-06-26 18:09:50,573 - INFO -   2025-06-26 18:09:47,564 - WARNING - Type de contenu inattendu: text/plain; charset=utf-8
+2025-06-26 18:09:50,574 - INFO -   2025-06-26 18:09:47,723 - INFO - Progression worldometer_coronavirus_daily_data.csv: 10.5%
+2025-06-26 18:09:50,574 - INFO -   2025-06-26 18:09:47,748 - INFO - Progression worldometer_coronavirus_daily_data.csv: 21.1%
+2025-06-26 18:09:50,574 - INFO -   2025-06-26 18:09:47,765 - INFO - Progression worldometer_coronavirus_daily_data.csv: 31.6%
+2025-06-26 18:09:50,578 - INFO -   2025-06-26 18:09:47,810 - INFO - Progression worldometer_coronavirus_daily_data.csv: 42.1%
+2025-06-26 18:09:50,584 - INFO -   2025-06-26 18:09:47,836 - INFO - Progression worldometer_coronavirus_daily_data.csv: 52.7%
+2025-06-26 18:09:50,585 - INFO -   2025-06-26 18:09:47,867 - INFO - Progression worldometer_coronavirus_daily_data.csv: 63.2%
+2025-06-26 18:09:50,585 - INFO -   2025-06-26 18:09:47,890 - INFO - Progression worldometer_coronavirus_daily_data.csv: 73.7%
+2025-06-26 18:09:50,586 - INFO -   2025-06-26 18:09:47,903 - INFO - Progression worldometer_coronavirus_daily_data.csv: 84.3%
+2025-06-26 18:09:50,586 - INFO -   2025-06-26 18:09:47,918 - INFO - Progression worldometer_coronavirus_daily_data.csv: 94.8%
+2025-06-26 18:09:50,587 - INFO -   2025-06-26 18:09:47,932 - INFO - Progression worldometer_coronavirus_daily_data.csv: 105.3%
+2025-06-26 18:09:50,588 - INFO -   2025-06-26 18:09:47,943 - INFO - Progression worldometer_coronavirus_daily_data.csv: 115.9%
+2025-06-26 18:09:50,590 - INFO -   2025-06-26 18:09:47,958 - INFO - Progression worldometer_coronavirus_daily_data.csv: 126.4%
+2025-06-26 18:09:50,591 - INFO -   2025-06-26 18:09:47,971 - INFO - Progression worldometer_coronavirus_daily_data.csv: 136.9%
+2025-06-26 18:09:50,591 - INFO -   2025-06-26 18:09:47,982 - INFO - Progression worldometer_coronavirus_daily_data.csv: 147.4%
+2025-06-26 18:09:50,592 - INFO -   2025-06-26 18:09:47,995 - INFO - Progression worldometer_coronavirus_daily_data.csv: 158.0%
+2025-06-26 18:09:50,593 - INFO -   2025-06-26 18:09:48,002 - INFO - Progression worldometer_coronavirus_daily_data.csv: 168.5%
+2025-06-26 18:09:50,599 - INFO -   2025-06-26 18:09:48,010 - INFO - Progression worldometer_coronavirus_daily_data.csv: 179.0%
+2025-06-26 18:09:50,603 - INFO -   2025-06-26 18:09:48,018 - INFO - Progression worldometer_coronavirus_daily_data.csv: 189.6%
+2025-06-26 18:09:50,605 - INFO -   2025-06-26 18:09:48,024 - INFO - Progression worldometer_coronavirus_daily_data.csv: 200.1%
+2025-06-26 18:09:50,606 - INFO -   2025-06-26 18:09:48,030 - INFO - Progression worldometer_coronavirus_daily_data.csv: 210.6%
+2025-06-26 18:09:50,607 - INFO -   2025-06-26 18:09:48,037 - INFO - Progression worldometer_coronavirus_daily_data.csv: 221.2%
+2025-06-26 18:09:50,607 - INFO -   2025-06-26 18:09:48,046 - INFO - Progression worldometer_coronavirus_daily_data.csv: 231.7%
+2025-06-26 18:09:50,608 - INFO -   2025-06-26 18:09:48,056 - INFO - Progression worldometer_coronavirus_daily_data.csv: 242.2%
+2025-06-26 18:09:50,608 - INFO -   2025-06-26 18:09:48,072 - INFO - Progression worldometer_coronavirus_daily_data.csv: 252.8%
+2025-06-26 18:09:50,619 - INFO -   2025-06-26 18:09:48,091 - INFO - Progression worldometer_coronavirus_daily_data.csv: 263.3%
+2025-06-26 18:09:50,629 - INFO -   2025-06-26 18:09:48,115 - INFO - Progression worldometer_coronavirus_daily_data.csv: 273.8%
+2025-06-26 18:09:50,637 - INFO -   2025-06-26 18:09:48,131 - INFO - Progression worldometer_coronavirus_daily_data.csv: 284.4%
+2025-06-26 18:09:50,641 - INFO -   2025-06-26 18:09:48,139 - INFO - Progression worldometer_coronavirus_daily_data.csv: 294.9%
+2025-06-26 18:09:50,644 - INFO -   2025-06-26 18:09:48,145 - INFO - Progression worldometer_coronavirus_daily_data.csv: 305.4%
+2025-06-26 18:09:50,653 - INFO -   2025-06-26 18:09:48,154 - INFO - Progression worldometer_coronavirus_daily_data.csv: 316.0%
+2025-06-26 18:09:50,654 - INFO -   2025-06-26 18:09:48,161 - INFO - Progression worldometer_coronavirus_daily_data.csv: 326.5%
+2025-06-26 18:09:50,654 - INFO -   2025-06-26 18:09:48,170 - INFO - Progression worldometer_coronavirus_daily_data.csv: 337.0%
+2025-06-26 18:09:50,655 - INFO -   2025-06-26 18:09:48,185 - INFO - Progression worldometer_coronavirus_daily_data.csv: 347.6%
+2025-06-26 18:09:50,656 - INFO -   2025-06-26 18:09:48,195 - INFO - Progression worldometer_coronavirus_daily_data.csv: 358.1%
+2025-06-26 18:09:50,657 - INFO -   2025-06-26 18:09:48,208 - INFO - Progression worldometer_coronavirus_daily_data.csv: 368.6%
+2025-06-26 18:09:50,658 - INFO -   2025-06-26 18:09:48,217 - INFO - Progression worldometer_coronavirus_daily_data.csv: 379.2%
+2025-06-26 18:09:50,658 - INFO -   2025-06-26 18:09:48,226 - INFO - Progression worldometer_coronavirus_daily_data.csv: 389.7%
+2025-06-26 18:09:50,661 - INFO -   2025-06-26 18:09:48,234 - INFO - Progression worldometer_coronavirus_daily_data.csv: 400.2%
+2025-06-26 18:09:50,666 - INFO -   2025-06-26 18:09:48,240 - INFO - Progression worldometer_coronavirus_daily_data.csv: 410.8%
+2025-06-26 18:09:50,667 - INFO -   2025-06-26 18:09:48,249 - INFO - Progression worldometer_coronavirus_daily_data.csv: 421.3%
+2025-06-26 18:09:50,668 - INFO -   2025-06-26 18:09:48,266 - INFO - Progression worldometer_coronavirus_daily_data.csv: 431.8%
+2025-06-26 18:09:50,668 - INFO -   2025-06-26 18:09:48,274 - INFO - Progression worldometer_coronavirus_daily_data.csv: 442.3%
+2025-06-26 18:09:50,669 - INFO -   2025-06-26 18:09:48,289 - INFO - Progression worldometer_coronavirus_daily_data.csv: 452.9%
+2025-06-26 18:09:50,669 - INFO -   2025-06-26 18:09:48,310 - INFO - Progression worldometer_coronavirus_daily_data.csv: 463.4%
+2025-06-26 18:09:50,671 - INFO -   2025-06-26 18:09:48,325 - INFO - Progression worldometer_coronavirus_daily_data.csv: 473.9%
+2025-06-26 18:09:50,673 - INFO -   2025-06-26 18:09:48,343 - INFO - Progression worldometer_coronavirus_daily_data.csv: 484.5%
+2025-06-26 18:09:50,675 - INFO -   2025-06-26 18:09:48,357 - INFO - Progression worldometer_coronavirus_daily_data.csv: 495.0%
+2025-06-26 18:09:50,686 - INFO -   2025-06-26 18:09:48,374 - INFO - Progression worldometer_coronavirus_daily_data.csv: 505.5%
+2025-06-26 18:09:50,687 - INFO -   2025-06-26 18:09:48,390 - INFO - Progression worldometer_coronavirus_daily_data.csv: 516.1%
+2025-06-26 18:09:50,688 - INFO -   2025-06-26 18:09:48,399 - INFO - Progression worldometer_coronavirus_daily_data.csv: 526.6%
+2025-06-26 18:09:50,689 - INFO -   2025-06-26 18:09:48,436 - INFO - Progression worldometer_coronavirus_daily_data.csv: 537.1%
+2025-06-26 18:09:50,689 - INFO -   2025-06-26 18:09:48,452 - INFO - Progression worldometer_coronavirus_daily_data.csv: 547.7%
+2025-06-26 18:09:50,689 - INFO -   2025-06-26 18:09:48,458 - INFO - Progression worldometer_coronavirus_daily_data.csv: 558.2%
+2025-06-26 18:09:50,689 - INFO -   2025-06-26 18:09:48,465 - INFO - Progression worldometer_coronavirus_daily_data.csv: 568.7%
+2025-06-26 18:09:50,690 - INFO -   2025-06-26 18:09:48,471 - INFO - Progression worldometer_coronavirus_daily_data.csv: 579.3%
+2025-06-26 18:09:50,691 - INFO -   2025-06-26 18:09:48,476 - INFO - Progression worldometer_coronavirus_daily_data.csv: 589.8%
+2025-06-26 18:09:50,692 - INFO -   2025-06-26 18:09:48,484 - INFO - Progression worldometer_coronavirus_daily_data.csv: 600.3%
+2025-06-26 18:09:50,692 - INFO -   2025-06-26 18:09:48,488 - INFO - Progression worldometer_coronavirus_daily_data.csv: 610.9%
+2025-06-26 18:09:50,700 - INFO -   2025-06-26 18:09:48,495 - INFO - Progression worldometer_coronavirus_daily_data.csv: 621.4%
+2025-06-26 18:09:50,702 - INFO -   2025-06-26 18:09:48,501 - INFO - Progression worldometer_coronavirus_daily_data.csv: 631.9%
+2025-06-26 18:09:50,703 - INFO -   2025-06-26 18:09:48,508 - INFO - Progression worldometer_coronavirus_daily_data.csv: 642.5%
+2025-06-26 18:09:50,704 - INFO -   2025-06-26 18:09:48,516 - INFO - Progression worldometer_coronavirus_daily_data.csv: 653.0%
+2025-06-26 18:09:50,704 - INFO -   2025-06-26 18:09:48,527 - INFO - Progression worldometer_coronavirus_daily_data.csv: 663.5%
+2025-06-26 18:09:50,705 - INFO -   2025-06-26 18:09:48,538 - INFO - Progression worldometer_coronavirus_daily_data.csv: 674.1%
+2025-06-26 18:09:50,705 - INFO -   2025-06-26 18:09:48,545 - INFO - Progression worldometer_coronavirus_daily_data.csv: 684.6%
+2025-06-26 18:09:50,706 - INFO -   2025-06-26 18:09:48,553 - INFO - Progression worldometer_coronavirus_daily_data.csv: 695.1%
+2025-06-26 18:09:50,706 - INFO -   2025-06-26 18:09:48,565 - INFO - Progression worldometer_coronavirus_daily_data.csv: 705.7%
+2025-06-26 18:09:50,706 - INFO -   2025-06-26 18:09:48,573 - INFO - Progression worldometer_coronavirus_daily_data.csv: 716.2%
+2025-06-26 18:09:50,707 - INFO -   2025-06-26 18:09:48,581 - INFO - Progression worldometer_coronavirus_daily_data.csv: 726.7%
+2025-06-26 18:09:50,707 - INFO -   2025-06-26 18:09:48,588 - INFO - Progression worldometer_coronavirus_daily_data.csv: 737.2%
+2025-06-26 18:09:50,707 - INFO -   2025-06-26 18:09:48,596 - INFO - Progression worldometer_coronavirus_daily_data.csv: 747.8%
+2025-06-26 18:09:50,708 - INFO -   2025-06-26 18:09:48,607 - INFO - Progression worldometer_coronavirus_daily_data.csv: 758.3%
+2025-06-26 18:09:50,716 - INFO -   2025-06-26 18:09:48,616 - INFO - Progression worldometer_coronavirus_daily_data.csv: 768.8%
+2025-06-26 18:09:50,718 - INFO -   2025-06-26 18:09:48,622 - INFO - Progression worldometer_coronavirus_daily_data.csv: 779.4%
+2025-06-26 18:09:50,718 - INFO -   2025-06-26 18:09:48,630 - INFO - Progression worldometer_coronavirus_daily_data.csv: 789.9%
+2025-06-26 18:09:50,719 - INFO -   2025-06-26 18:09:48,637 - INFO - Progression worldometer_coronavirus_daily_data.csv: 800.4%
+2025-06-26 18:09:50,720 - INFO -   2025-06-26 18:09:48,643 - INFO - Progression worldometer_coronavirus_daily_data.csv: 811.0%
+2025-06-26 18:09:50,721 - INFO -   2025-06-26 18:09:48,651 - INFO - Progression worldometer_coronavirus_daily_data.csv: 821.5%
+2025-06-26 18:09:50,721 - INFO -   2025-06-26 18:09:48,660 - INFO - Progression worldometer_coronavirus_daily_data.csv: 832.0%
+2025-06-26 18:09:50,722 - INFO -   2025-06-26 18:09:48,667 - INFO - Progression worldometer_coronavirus_daily_data.csv: 842.6%
+2025-06-26 18:09:50,722 - INFO -   2025-06-26 18:09:48,676 - INFO - Progression worldometer_coronavirus_daily_data.csv: 853.1%
+2025-06-26 18:09:50,723 - INFO -   2025-06-26 18:09:48,684 - INFO - Progression worldometer_coronavirus_daily_data.csv: 863.6%
+2025-06-26 18:09:50,723 - INFO -   2025-06-26 18:09:48,694 - INFO - Progression worldometer_coronavirus_daily_data.csv: 874.2%
+2025-06-26 18:09:50,724 - INFO -   2025-06-26 18:09:48,700 - INFO - Progression worldometer_coronavirus_daily_data.csv: 884.7%
+2025-06-26 18:09:50,724 - INFO -   2025-06-26 18:09:48,707 - INFO - Progression worldometer_coronavirus_daily_data.csv: 895.2%
+2025-06-26 18:09:50,724 - INFO -   2025-06-26 18:09:48,714 - INFO - Progression worldometer_coronavirus_daily_data.csv: 905.8%
+2025-06-26 18:09:50,725 - INFO -   2025-06-26 18:09:48,722 - INFO - Progression worldometer_coronavirus_daily_data.csv: 916.3%
+2025-06-26 18:09:50,727 - INFO -   2025-06-26 18:09:48,731 - INFO - Progression worldometer_coronavirus_daily_data.csv: 926.8%
+2025-06-26 18:09:50,731 - INFO -   2025-06-26 18:09:48,737 - INFO - Progression worldometer_coronavirus_daily_data.csv: 937.4%
+2025-06-26 18:09:50,735 - INFO -   2025-06-26 18:09:48,742 - INFO - Progression worldometer_coronavirus_daily_data.csv: 947.9%
+2025-06-26 18:09:50,736 - INFO -   2025-06-26 18:09:48,748 - INFO - Progression worldometer_coronavirus_daily_data.csv: 958.4%
+2025-06-26 18:09:50,737 - INFO -   2025-06-26 18:09:48,754 - INFO - Progression worldometer_coronavirus_daily_data.csv: 969.0%
+2025-06-26 18:09:50,738 - INFO -   2025-06-26 18:09:48,761 - INFO - Progression worldometer_coronavirus_daily_data.csv: 979.5%
+2025-06-26 18:09:50,738 - INFO -   2025-06-26 18:09:48,769 - INFO - Telechargement reussi: worldometer_coronavirus_daily_data.csv
+2025-06-26 18:09:50,738 - INFO -   2025-06-26 18:09:48,797 - INFO - Integrite verifiee pour worldometer_coronavirus_daily_data.csv (93.83MB)
+2025-06-26 18:09:50,739 - INFO -   2025-06-26 18:09:49,026 - INFO - Checksum SHA-256: 8473d0f0fdf962e1ffbd5b85b18726fc96a49bab109e271186c339725a12b10c
+2025-06-26 18:09:50,739 - INFO -   2025-06-26 18:09:49,026 - INFO - SUCCES: Donnees COVID-19 Worldometer - EXTRACTION REUSSIE
+2025-06-26 18:09:50,740 - INFO -   2025-06-26 18:09:49,026 - INFO - 
+2025-06-26 18:09:50,740 - INFO -   ============================================================
+2025-06-26 18:09:50,740 - INFO -   2025-06-26 18:09:49,027 - INFO - EXTRACTION: Donnees MPOX Our World in Data
+2025-06-26 18:09:50,741 - INFO -   2025-06-26 18:09:49,027 - INFO - URL: https://raw.githubusercontent.com/owid/monkeypox/main/owid-monkeypox-data.csv
+2025-06-26 18:09:50,741 - INFO -   2025-06-26 18:09:49,027 - INFO - Fichier: owid-monkeypox-data.csv
+2025-06-26 18:09:50,741 - INFO -   2025-06-26 18:09:49,027 - INFO - ============================================================
+2025-06-26 18:09:50,743 - INFO -   2025-06-26 18:09:49,027 - INFO - Tentative 1/3 - Telechargement de owid-monkeypox-data.csv
+2025-06-26 18:09:50,743 - INFO -   2025-06-26 18:09:50,059 - WARNING - Type de contenu inattendu: text/plain; charset=utf-8
+2025-06-26 18:09:50,750 - INFO -   2025-06-26 18:09:50,126 - INFO - Progression owid-monkeypox-data.csv: 155.9%
+2025-06-26 18:09:50,752 - INFO -   2025-06-26 18:09:50,140 - INFO - Progression owid-monkeypox-data.csv: 311.9%
+2025-06-26 18:09:50,753 - INFO -   2025-06-26 18:09:50,179 - INFO - Progression owid-monkeypox-data.csv: 467.8%
+2025-06-26 18:09:50,753 - INFO -   2025-06-26 18:09:50,197 - INFO - Progression owid-monkeypox-data.csv: 623.7%
+2025-06-26 18:09:50,754 - INFO -   2025-06-26 18:09:50,217 - INFO - Progression owid-monkeypox-data.csv: 779.7%
+2025-06-26 18:09:50,754 - INFO -   2025-06-26 18:09:50,228 - INFO - Progression owid-monkeypox-data.csv: 935.6%
+2025-06-26 18:09:50,755 - INFO -   2025-06-26 18:09:50,242 - INFO - Progression owid-monkeypox-data.csv: 1091.5%
+2025-06-26 18:09:50,756 - INFO -   2025-06-26 18:09:50,261 - INFO - Progression owid-monkeypox-data.csv: 1247.5%
+2025-06-26 18:09:50,756 - INFO -   2025-06-26 18:09:50,269 - INFO - Progression owid-monkeypox-data.csv: 1403.4%
+2025-06-26 18:09:50,756 - INFO -   2025-06-26 18:09:50,272 - INFO - Telechargement reussi: owid-monkeypox-data.csv
+2025-06-26 18:09:50,757 - INFO -   2025-06-26 18:09:50,293 - INFO - Integrite verifiee pour owid-monkeypox-data.csv (9.26MB)
+2025-06-26 18:09:50,758 - INFO -   2025-06-26 18:09:50,322 - INFO - Checksum SHA-256: 35b2f4ae3643c4e3539e6a92ef8eda7a6d82ef90d8280dae962204b5302a4ea7
+2025-06-26 18:09:50,758 - INFO -   2025-06-26 18:09:50,323 - INFO - SUCCES: Donnees MPOX Our World in Data - EXTRACTION REUSSIE
+2025-06-26 18:09:50,765 - INFO -   2025-06-26 18:09:50,323 - INFO - 
+2025-06-26 18:09:50,767 - INFO -   ============================================================
+2025-06-26 18:09:50,768 - INFO -   2025-06-26 18:09:50,323 - INFO - RESUME DE L'EXTRACTION
+2025-06-26 18:09:50,768 - INFO -   2025-06-26 18:09:50,323 - INFO - ============================================================
+2025-06-26 18:09:50,768 - INFO -   2025-06-26 18:09:50,327 - INFO - Donnees COVID-19 Worldometer: REUSSI
+2025-06-26 18:09:50,768 - INFO -   2025-06-26 18:09:50,332 - INFO - Donnees MPOX Our World in Data: REUSSI
+2025-06-26 18:09:50,769 - INFO -   2025-06-26 18:09:50,332 - INFO - Temps total: 9.16 secondes
+2025-06-26 18:09:50,769 - INFO -   2025-06-26 18:09:50,333 - INFO - EXTRACTION COMPLETE - TOUTES LES SOURCES TELECHARGEES
+2025-06-26 18:09:50,770 - INFO -   Extraction terminee avec succes!
+2025-06-26 18:09:50,770 - INFO - SUCCES: Extraction automatisee des donnees COVID-19 et MPOX - REUSSI (10.27s)
+2025-06-26 18:09:50,771 - INFO - 
+ETAPE: Profiling
+2025-06-26 18:09:50,772 - INFO - 
+============================================================
+2025-06-26 18:09:50,772 - INFO - EXECUTION: Profiling et analyse des donnees brutes
+2025-06-26 18:09:50,772 - INFO - Script: 02_profile.py
+2025-06-26 18:09:50,773 - INFO - ============================================================
+2025-06-26 18:10:36,260 - INFO - Sortie standard:
+2025-06-26 18:10:36,262 - INFO -   DEBUT du profiling et de l'analyse exploratoire des fichiers CSV...
+2025-06-26 18:10:36,264 - INFO -   Dossier des graphiques: ../graphs
+2025-06-26 18:10:36,265 - INFO -   Rapport d'interpretation: ../logs\interpretation_report_20250626_180954.md
+2025-06-26 18:10:36,268 - INFO -   --- Profiling covid ---
+2025-06-26 18:10:36,268 - INFO -   Shape: (429435, 67)
+2025-06-26 18:10:36,270 - INFO -   Colonnes: ['iso_code', 'continent', 'location', 'date', 'total_cases', 'new_cases', 'new_cases_smoothed', 'total_deaths', 'new_deaths', 'new_deaths_smoothed', 'total_cases_per_million', 'new_cases_per_million', 'new_cases_smoothed_per_million', 'total_deaths_per_million', 'new_deaths_per_million', 'new_deaths_smoothed_per_million', 'reproduction_rate', 'icu_patients', 'icu_patients_per_million', 'hosp_patients', 'hosp_patients_per_million', 'weekly_icu_admissions', 'weekly_icu_admissions_per_million', 'weekly_hosp_admissions', 'weekly_hosp_admissions_per_million', 'total_tests', 'new_tests', 'total_tests_per_thousand', 'new_tests_per_thousand', 'new_tests_smoothed', 'new_tests_smoothed_per_thousand', 'positive_rate', 'tests_per_case', 'tests_units', 'total_vaccinations', 'people_vaccinated', 'people_fully_vaccinated', 'total_boosters', 'new_vaccinations', 'new_vaccinations_smoothed', 'total_vaccinations_per_hundred', 'people_vaccinated_per_hundred', 'people_fully_vaccinated_per_hundred', 'total_boosters_per_hundred', 'new_vaccinations_smoothed_per_million', 'new_people_vaccinated_smoothed', 'new_people_vaccinated_smoothed_per_hundred', 'stringency_index', 'population_density', 'median_age', 'aged_65_older', 'aged_70_older', 'gdp_per_capita', 'extreme_poverty', 'cardiovasc_death_rate', 'diabetes_prevalence', 'female_smokers', 'male_smokers', 'handwashing_facilities', 'hospital_beds_per_thousand', 'life_expectancy', 'human_development_index', 'population', 'excess_mortality_cumulative_absolute', 'excess_mortality_cumulative', 'excess_mortality', 'excess_mortality_cumulative_per_million']
+2025-06-26 18:10:36,281 - INFO -   Types:
+2025-06-26 18:10:36,282 - INFO -   iso_code                                    object
+2025-06-26 18:10:36,284 - INFO -   continent                                   object
+2025-06-26 18:10:36,286 - INFO -   location                                    object
+2025-06-26 18:10:36,291 - INFO -   date                                        object
+2025-06-26 18:10:36,293 - INFO -   total_cases                                float64
+2025-06-26 18:10:36,294 - INFO -                                               ...   
+2025-06-26 18:10:36,295 - INFO -   population                                   int64
+2025-06-26 18:10:36,296 - INFO -   excess_mortality_cumulative_absolute       float64
+2025-06-26 18:10:36,299 - INFO -   excess_mortality_cumulative                float64
+2025-06-26 18:10:36,304 - INFO -   excess_mortality                           float64
+2025-06-26 18:10:36,305 - INFO -   excess_mortality_cumulative_per_million    float64
+2025-06-26 18:10:36,307 - INFO -   Length: 67, dtype: object
+2025-06-26 18:10:36,308 - INFO -   Valeurs manquantes par colonne:
+2025-06-26 18:10:36,309 - INFO -   iso_code                                        0
+2025-06-26 18:10:36,310 - INFO -   continent                                   26525
+2025-06-26 18:10:36,312 - INFO -   location                                        0
+2025-06-26 18:10:36,313 - INFO -   date                                            0
+2025-06-26 18:10:36,315 - INFO -   total_cases                                 17631
+2025-06-26 18:10:36,316 - INFO -                                               ...  
+2025-06-26 18:10:36,317 - INFO -   population                                      0
+2025-06-26 18:10:36,318 - INFO -   excess_mortality_cumulative_absolute       416024
+2025-06-26 18:10:36,319 - INFO -   excess_mortality_cumulative                416024
+2025-06-26 18:10:36,320 - INFO -   excess_mortality                           416024
+2025-06-26 18:10:36,326 - INFO -   excess_mortality_cumulative_per_million    416024
+2025-06-26 18:10:36,328 - INFO -   Length: 67, dtype: int64
+2025-06-26 18:10:36,328 - INFO -   Premieres lignes:
+2025-06-26 18:10:36,329 - INFO -     iso_code continent  ... excess_mortality excess_mortality_cumulative_per_million
+2025-06-26 18:10:36,330 - INFO -   0      AFG      Asia  ...              NaN                                     NaN
+2025-06-26 18:10:36,331 - INFO -   1      AFG      Asia  ...              NaN                                     NaN
+2025-06-26 18:10:36,332 - INFO -   2      AFG      Asia  ...              NaN                                     NaN
+2025-06-26 18:10:36,332 - INFO -   [3 rows x 67 columns]
+2025-06-26 18:10:36,333 - INFO -   Statistiques descriptives:
+2025-06-26 18:10:36,334 - INFO -           iso_code  ... excess_mortality_cumulative_per_million
+2025-06-26 18:10:36,335 - INFO -   count     429435  ...                                 13411.0
+2025-06-26 18:10:36,336 - INFO -   unique       255  ...                                     NaN
+2025-06-26 18:10:36,336 - INFO -   top     OWID_HIC  ...                                     NaN
+2025-06-26 18:10:36,338 - INFO -   [3 rows x 67 columns]
+2025-06-26 18:10:36,338 - INFO -   Doublons (lignes identiques): 0
+2025-06-26 18:10:36,339 - INFO -   [GRAPHIQUES] Creation des visualisations pour covid...
+2025-06-26 18:10:36,340 - INFO -   [SUCCES] Visualisations sauvegardees: ../graphs/covid_analysis.png
+2025-06-26 18:10:36,342 - INFO -   [SUCCES] Interpretations sauvegardees: ../logs\interpretation_report_20250626_180954.md
+2025-06-26 18:10:36,347 - INFO -   --- Profiling mpox ---
+2025-06-26 18:10:36,348 - INFO -   Shape: (123852, 15)
+2025-06-26 18:10:36,349 - INFO -   Colonnes: ['location', 'date', 'iso_code', 'total_cases', 'total_deaths', 'new_cases', 'new_deaths', 'new_cases_smoothed', 'new_deaths_smoothed', 'new_cases_per_million', 'total_cases_per_million', 'new_cases_smoothed_per_million', 'new_deaths_per_million', 'total_deaths_per_million', 'new_deaths_smoothed_per_million']
+2025-06-26 18:10:36,351 - INFO -   Types:
+2025-06-26 18:10:36,351 - INFO -   location                            object
+2025-06-26 18:10:36,352 - INFO -   date                                object
+2025-06-26 18:10:36,353 - INFO -   iso_code                            object
+2025-06-26 18:10:36,353 - INFO -   total_cases                        float64
+2025-06-26 18:10:36,354 - INFO -   total_deaths                       float64
+2025-06-26 18:10:36,354 - INFO -   new_cases                          float64
+2025-06-26 18:10:36,355 - INFO -   new_deaths                         float64
+2025-06-26 18:10:36,356 - INFO -   new_cases_smoothed                 float64
+2025-06-26 18:10:36,356 - INFO -   new_deaths_smoothed                float64
+2025-06-26 18:10:36,357 - INFO -   new_cases_per_million              float64
+2025-06-26 18:10:36,358 - INFO -   total_cases_per_million            float64
+2025-06-26 18:10:36,359 - INFO -   new_cases_smoothed_per_million     float64
+2025-06-26 18:10:36,360 - INFO -   new_deaths_per_million             float64
+2025-06-26 18:10:36,361 - INFO -   total_deaths_per_million           float64
+2025-06-26 18:10:36,365 - INFO -   new_deaths_smoothed_per_million    float64
+2025-06-26 18:10:36,367 - INFO -   dtype: object
+2025-06-26 18:10:36,368 - INFO -   Valeurs manquantes par colonne:
+2025-06-26 18:10:36,369 - INFO -   location                              0
+2025-06-26 18:10:36,370 - INFO -   date                                  0
+2025-06-26 18:10:36,370 - INFO -   iso_code                           1128
+2025-06-26 18:10:36,371 - INFO -   total_cases                           1
+2025-06-26 18:10:36,371 - INFO -   total_deaths                          1
+2025-06-26 18:10:36,371 - INFO -   new_cases                             1
+2025-06-26 18:10:36,372 - INFO -   new_deaths                            1
+2025-06-26 18:10:36,372 - INFO -   new_cases_smoothed                    1
+2025-06-26 18:10:36,373 - INFO -   new_deaths_smoothed                   1
+2025-06-26 18:10:36,374 - INFO -   new_cases_per_million                 1
+2025-06-26 18:10:36,375 - INFO -   total_cases_per_million               1
+2025-06-26 18:10:36,376 - INFO -   new_cases_smoothed_per_million        1
+2025-06-26 18:10:36,376 - INFO -   new_deaths_per_million                1
+2025-06-26 18:10:36,376 - INFO -   total_deaths_per_million              1
+2025-06-26 18:10:36,377 - INFO -   new_deaths_smoothed_per_million       1
+2025-06-26 18:10:36,381 - INFO -   dtype: int64
+2025-06-26 18:10:36,383 - INFO -   Premieres lignes:
+2025-06-26 18:10:36,385 - INFO -     location  ... new_deaths_smoothed_per_million
+2025-06-26 18:10:36,385 - INFO -   0   Africa  ...                             0.0
+2025-06-26 18:10:36,386 - INFO -   1   Africa  ...                             0.0
+2025-06-26 18:10:36,386 - INFO -   2   Africa  ...                             0.0
+2025-06-26 18:10:36,387 - INFO -   [3 rows x 15 columns]
+2025-06-26 18:10:36,387 - INFO -   Statistiques descriptives:
+2025-06-26 18:10:36,387 - INFO -          location  ... new_deaths_smoothed_per_million
+2025-06-26 18:10:36,387 - INFO -   count    123852  ...                        123851.0
+2025-06-26 18:10:36,388 - INFO -   unique      144  ...                             NaN
+2025-06-26 18:10:36,388 - INFO -   top      Africa  ...                             NaN
+2025-06-26 18:10:36,389 - INFO -   [3 rows x 15 columns]
+2025-06-26 18:10:36,389 - INFO -   Doublons (lignes identiques): 0
+2025-06-26 18:10:36,389 - INFO -   [GRAPHIQUES] Creation des visualisations pour mpox...
+2025-06-26 18:10:36,390 - INFO -   [SUCCES] Visualisations sauvegardees: ../graphs/mpox_analysis.png
+2025-06-26 18:10:36,390 - INFO -   [SUCCES] Interpretations sauvegardees: ../logs\interpretation_report_20250626_180954.md
+2025-06-26 18:10:36,390 - INFO -   [COMPARAISON] Creation de l'analyse comparative...
+2025-06-26 18:10:36,391 - INFO -   [SUCCES] Analyse comparative sauvegardee: ../graphs/comparative_analysis.png
+2025-06-26 18:10:36,391 - INFO -   SUCCES: Profiling termine!
+2025-06-26 18:10:36,392 - INFO -   Rapport detaille: ../logs\profiling_report_20250626_180954.txt
+2025-06-26 18:10:36,392 - INFO -   Rapport d'interpretation: ../logs\interpretation_report_20250626_180954.md
+2025-06-26 18:10:36,393 - INFO -   Graphiques sauvegardes dans: ../graphs
+2025-06-26 18:10:36,393 - INFO -   Fichiers generes:
+2025-06-26 18:10:36,394 - INFO -      • covid_analysis.png
+2025-06-26 18:10:36,394 - INFO -      • mpox_analysis.png
+2025-06-26 18:10:36,394 - INFO -      • comparative_analysis.png
+2025-06-26 18:10:36,395 - INFO - SUCCES: Profiling et analyse des donnees brutes - REUSSI (45.49s)
+2025-06-26 18:10:36,398 - INFO - 
+ETAPE: Transformation
+2025-06-26 18:10:36,400 - INFO - 
+============================================================
+2025-06-26 18:10:36,401 - INFO - EXECUTION: Transformation et nettoyage des donnees
+2025-06-26 18:10:36,401 - INFO - Script: 03_transform.py
+2025-06-26 18:10:36,401 - INFO - ============================================================
+2025-06-26 18:10:58,219 - INFO - Sortie standard:
+2025-06-26 18:10:58,220 - INFO -   Donnees COVID chargees: (429435, 67)
+2025-06-26 18:10:58,220 - INFO -   Donnees MPOX chargees: (123852, 15)
+2025-06-26 18:10:58,221 - INFO -   Colonnes COVID: ['iso_code', 'continent', 'location', 'date', 'total_cases', 'new_cases', 'new_cases_smoothed', 'total_deaths', 'new_deaths', 'new_deaths_smoothed', 'total_cases_per_million', 'new_cases_per_million', 'new_cases_smoothed_per_million', 'total_deaths_per_million', 'new_deaths_per_million', 'new_deaths_smoothed_per_million', 'reproduction_rate', 'icu_patients', 'icu_patients_per_million', 'hosp_patients', 'hosp_patients_per_million', 'weekly_icu_admissions', 'weekly_icu_admissions_per_million', 'weekly_hosp_admissions', 'weekly_hosp_admissions_per_million', 'total_tests', 'new_tests', 'total_tests_per_thousand', 'new_tests_per_thousand', 'new_tests_smoothed', 'new_tests_smoothed_per_thousand', 'positive_rate', 'tests_per_case', 'tests_units', 'total_vaccinations', 'people_vaccinated', 'people_fully_vaccinated', 'total_boosters', 'new_vaccinations', 'new_vaccinations_smoothed', 'total_vaccinations_per_hundred', 'people_vaccinated_per_hundred', 'people_fully_vaccinated_per_hundred', 'total_boosters_per_hundred', 'new_vaccinations_smoothed_per_million', 'new_people_vaccinated_smoothed', 'new_people_vaccinated_smoothed_per_hundred', 'stringency_index', 'population_density', 'median_age', 'aged_65_older', 'aged_70_older', 'gdp_per_capita', 'extreme_poverty', 'cardiovasc_death_rate', 'diabetes_prevalence', 'female_smokers', 'male_smokers', 'handwashing_facilities', 'hospital_beds_per_thousand', 'life_expectancy', 'human_development_index', 'population', 'excess_mortality_cumulative_absolute', 'excess_mortality_cumulative', 'excess_mortality', 'excess_mortality_cumulative_per_million']
+2025-06-26 18:10:58,232 - INFO -   Colonnes MPOX: ['location', 'date', 'iso_code', 'total_cases', 'total_deaths', 'new_cases', 'new_deaths', 'new_cases_smoothed', 'new_deaths_smoothed', 'new_cases_per_million', 'total_cases_per_million', 'new_cases_smoothed_per_million', 'new_deaths_per_million', 'total_deaths_per_million', 'new_deaths_smoothed_per_million']
+2025-06-26 18:10:58,235 - INFO -   Attention : population manquante pour 25 pays : ['England' 'European Union (27)' 'Guernsey' 'Guinea-Bissau'
+2025-06-26 18:10:58,237 - INFO -    'High-income countries' 'Hong Kong' 'Jersey' 'Kosovo'
+2025-06-26 18:10:58,238 - INFO -    'Low-income countries' 'Lower-middle-income countries' 'Macao'
+2025-06-26 18:10:58,239 - INFO -    'North Korea' 'Northern Cyprus' 'Northern Ireland'
+2025-06-26 18:10:58,240 - INFO -    'Northern Mariana Islands' 'Palestine' 'Pitcairn' 'Scotland' 'Tokelau'
+2025-06-26 18:10:58,241 - INFO -    'Turkmenistan' 'Tuvalu' 'United States Virgin Islands'
+2025-06-26 18:10:58,243 - INFO -    'Upper-middle-income countries' 'Vatican' 'Wales']
+2025-06-26 18:10:58,244 - INFO -   Attention : population manquante pour 1 pays : ['Kosovo']
+2025-06-26 18:10:58,245 - INFO -   Attention : code ISO manquant pour 8 pays : ['England' 'Hong Kong' 'Macao' 'Northern Cyprus' 'Northern Ireland'
+2025-06-26 18:10:58,247 - INFO -    'Scotland' 'United States Virgin Islands' 'Wales']
+2025-06-26 18:10:58,248 - INFO -   Transformation terminee. Fichiers generes dans processed/.
+2025-06-26 18:10:58,249 - INFO -   COVID: 810278 lignes
+2025-06-26 18:10:58,250 - INFO -   MPOX: 247702 lignes
+2025-06-26 18:10:58,251 - INFO -   Pays valides dans dim_country: 235 pays
+2025-06-26 18:10:58,252 - INFO - SUCCES: Transformation et nettoyage des donnees - REUSSI (21.82s)
+2025-06-26 18:10:58,254 - INFO - 
+VERIFICATION FINALE DES SORTIES
+2025-06-26 18:10:58,255 - INFO - 
+VERIFICATION DES FICHIERS DE SORTIE
+2025-06-26 18:10:58,261 - INFO - FICHIER PRESENT: ../raw_data/worldometer_coronavirus_daily_data.csv (93.83MB)
+2025-06-26 18:10:58,263 - INFO - FICHIER PRESENT: ../raw_data/owid-monkeypox-data.csv (9.26MB)
+2025-06-26 18:10:58,265 - INFO - FICHIER PRESENT: ../processed/fact_covid_history.csv (54.83MB)
+2025-06-26 18:10:58,267 - INFO - FICHIER PRESENT: ../processed/fact_mpox_history.csv (16.16MB)
+2025-06-26 18:10:58,269 - INFO - FICHIER PRESENT: ../processed/dim_country.csv (0.01MB)
+2025-06-26 18:10:58,270 - INFO - FICHIER PRESENT: ../processed/dim_indicator.csv (0.00MB)
+2025-06-26 18:10:58,271 - INFO - 
+============================================================
+2025-06-26 18:10:58,272 - INFO - RESUME DU PIPELINE ETL
+2025-06-26 18:10:58,272 - INFO - ============================================================
+2025-06-26 18:10:58,272 - INFO - EXTRACTION: REUSSI
+2025-06-26 18:10:58,274 - INFO - PROFILING: REUSSI
+2025-06-26 18:10:58,274 - INFO - TRANSFORMATION: REUSSI
+2025-06-26 18:10:58,275 - INFO - VERIFICATION: REUSSI
+2025-06-26 18:10:58,276 - INFO - Temps total: 85.46 secondes
+2025-06-26 18:10:58,277 - INFO - PIPELINE ETL COMPLET - TOUTES LES ETAPES REUSSIES

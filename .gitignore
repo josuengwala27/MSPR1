@@ -3,10 +3,6 @@ ETL/venv/
 __pycache__/
 *.pyc
 
-# Données générées
-ETL/processed/
-ETL/logs/
-
 # Environnement Node.js
 BDD/node_modules/
 
@@ -14,7 +10,6 @@ BDD/node_modules/
 BDD/.env
 
 # Fichiers temporaires
-*.log
 *.tmp
 .DS_Store
 Thumbs.db

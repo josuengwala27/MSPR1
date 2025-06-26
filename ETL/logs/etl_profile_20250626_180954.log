@@ -1,0 +1,8 @@
+2025-06-26 18:09:54,129 - INFO - Debut du profiling et de l'analyse exploratoire des fichiers CSV.
+2025-06-26 18:09:54,134 - INFO - Profiling covid (../raw_data\worldometer_coronavirus_daily_data.csv)
+2025-06-26 18:10:05,755 - INFO - Creation des visualisations pour covid
+2025-06-26 18:10:22,422 - INFO - Profiling covid termine.
+2025-06-26 18:10:22,423 - INFO - Profiling mpox (../raw_data\owid-monkeypox-data.csv)
+2025-06-26 18:10:23,464 - INFO - Creation des visualisations pour mpox
+2025-06-26 18:10:28,796 - INFO - Profiling mpox termine.
+2025-06-26 18:10:35,574 - INFO - Profiling et analyse exploratoire termines.
