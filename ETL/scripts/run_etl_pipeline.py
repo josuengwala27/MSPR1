@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Script principal orchestrant le pipeline ETL complet
-Auteur: MSPR Project
-Date: 2024
-Description: Execute automatiquement toutes les etapes ETL
-"""
 
 import os
 import sys
