@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 require('dotenv').config();
+const { swaggerUi, specs } = require('./swagger');
 
 // Import du middleware de sérialisation BigInt
 const bigIntSerializer = require('./middleware/bigIntSerializer');
@@ -16,6 +17,9 @@ app.use(express.json());
 
 // Middleware pour gérer la sérialisation des BigInt
 app.use(bigIntSerializer);
+
+// Documentation Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 // Routes
 app.use('/api/pays', require('./routes/paysRoutes'));

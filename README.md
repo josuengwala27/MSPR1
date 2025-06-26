@@ -1,142 +1,96 @@
 # MSPR – COVID & MPOX
 
-Cette partie permet d'extraire, transformer et charger (ETL) des données COVID-19 et MPOX dans une base de données analytique PostgreSQL, en utilisant un pipeline Python pour l'ETL et Prisma (Node.js) pour l'orchestration et le chargement.
+Projet complet d'intégration, d'analyse et d'exposition de données COVID-19 et MPOX, structuré en trois modules : **ETL**, **BDD**, **API**.
 
 ---
 
-## 1. Organisation du projet
+## 1. Architecture du projet
 
-- `ETL/` : Scripts Python, données brutes, données transformées, logs, documentation technique.
-- `BDD/` : Schéma Prisma, scripts Node.js de chargement, configuration PostgreSQL.
-- `README.md` (ce fichier) : Guide complet d'installation et d'utilisation.
-
----
-
-## 2. Prérequis
-
-- **Python 3.8+** (pour l'ETL)
-- **Node.js 18+** (pour Prisma et le chargement)
-- **PostgreSQL 15+** (base de données cible)
+- **ETL/** : Extraction, transformation, profiling et nettoyage des données brutes (Python). Génère les fichiers CSV prêts à charger dans la base (`ETL/processed/`).
+- **BDD/** : Schéma de base de données (Prisma/PostgreSQL), scripts de chargement Node.js, gestion de l'intégrité et de la performance.
+- **API/** : API REST Express/Prisma pour exposer les données, avec documentation Swagger/OpenAPI.
 
 ---
 
-## 3. Installation étape par étape
+## 2. Pipeline global
 
-### A. Préparer l'environnement Python (ETL)
-
-1. Aller dans le dossier ETL :
-   ```bash
-   cd ETL
-   ```
-2. Créer un environnement virtuel et l'activer :
-   ```bash
-   python -m venv venv
-   # Sous Windows :
-   .\venv\Scripts\activate
-   # Sous Linux/Mac :
-   source venv/bin/activate
-   ```
-3. Installer les dépendances :
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### B. Préparer l'environnement Node.js (BDD)
-
-1. Aller dans le dossier BDD :
-   ```bash
-   cd ../BDD
-   ```
-2. Installer les dépendances Node.js :
-   ```bash
-   npm install
-   ```
-
-### C. Installer PostgreSQL
-
-- Télécharger et installer PostgreSQL depuis [postgresql.org](https://www.postgresql.org/download/)
-- Noter le mot de passe de l'utilisateur `postgres` (par défaut utilisé dans la config)
-- Acceder à la console de PostgreSQL :
-   ```bash
-   psql -U postgres
-   ```
-- Créer une base vide nommée `pandemies` :
-   ```sql
-   CREATE DATABASE pandemies;
-   ```
-
-### D. Configurer la connexion à la base
-
-1. Dans le dossier `BDD`, créer un fichier `.env` avec :
-   ```env
-   DATABASE_URL="postgresql://postgres:lemotdepasse@localhost:5432/pandemies"
-   ```
-   *(Adapte le mot de passe si besoin)*
+1. **Extraction & Transformation (ETL)**
+   - Place les fichiers bruts dans `ETL/raw_data/`
+   - Exécute les scripts Python pour générer les fichiers transformés dans `ETL/processed/`
+2. **Chargement & Validation (BDD)**
+   - Synchronise le schéma avec Prisma (`npx prisma db push`)
+   - Charge les données CSV dans PostgreSQL (`npm run load`)
+   - Valide l'intégrité et la qualité des données
+3. **Exposition & Accès (API)**
+   - Démarre l'API Node.js (`npm start`)
+   - Accède à la documentation interactive sur `/api-docs`
+   - Utilise les endpoints pour interroger, filtrer et manipuler les données
 
 ---
 
-## 4. Pipeline complet – Étapes à suivre
+## 3. Documentation
 
-### 1. Générer les données transformées (ETL)
-
-- Place les fichiers bruts dans `ETL/raw_data/`
-- Exécute les scripts Python dans `ETL/scripts/` pour générer les fichiers transformés dans `ETL/processed/` :
-  ```bash
-  python scripts/01_extract_and_profile.py
-  python scripts/02_transform.py
-  ```
-- **À observer** :
-  - Les fichiers `dim_country.csv`, `dim_indicator.csv`, `fact_covid_history.csv`, `fact_mpox_history.csv` sont créés dans `ETL/processed/`
-  - Les logs d'exécution sont dans `ETL/logs/`
-
-### 2. Synchroniser le schéma de la base
-
-- Dans `BDD` :
-  ```bash
-  npx prisma db push
-  ```
-- **À observer** :
-  - La base PostgreSQL est créée/ajustée selon le schéma Prisma
-  - Aucun message d'erreur
-
-### 3. Charger toutes les données dans la base
-
-- Dans `BDD` :
-  ```bash
-  node load_data.js
-  ```
-- **À observer** :
-  - Nombre de pays et d'indicateurs chargés affiché
-  - Nombre de faits chargés pour chaque fichier
-  - Aucun message d'erreur
-
-### 4. Visualiser la base et vérifier les données
-
-- Lancer Prisma Studio :
-  ```bash
-  npx prisma studio
-  ```
-- **À observer** :
-  - Naviguer dans les tables `Pays`, `Indicateur`, `DonneeHistorique`
-  - Vérifier la présence des données, la cohérence des champs, la correspondance avec les CSV
+- **ETL/** : Voir `ETL/README.md` et `ETL/docs/` pour la justification, le profiling, la transformation, l'orchestration, les tests, le benchmark.
+- **BDD/** : Voir `BDD/README.md` et `BDD/docs/` pour la conception du schéma, l'initialisation, le chargement, la validation, l'optimisation.
+- **API/** : Voir `API/README.md` et la documentation Swagger sur `/api-docs` pour la liste complète des routes et leur fonctionnement.
 
 ---
 
-## 5. Conseils & bonnes pratiques
+## 4. Prérequis
 
-- Toujours vérifier les logs et les messages d'erreur à chaque étape
-- Adapter le fichier `.env` si la configuration PostgreSQL change
-- Pour recharger la base à partir de zéro, refaire `npx prisma db push` (attention, cela efface les données)
-- Les scripts sont conçus pour ignorer automatiquement les agrégats régionaux (codes ISO non standards)
-
----
-
-## 6. Ressources utiles
-
-- [Documentation Prisma](https://www.prisma.io/docs/)
-- [Documentation PostgreSQL](https://www.postgresql.org/docs/)
-- [Documentation Pandas](https://pandas.pydata.org/docs/)
+- Python 3.8+
+- Node.js 18+
+- PostgreSQL 15+
 
 ---
 
-**Auteur :** Projet MSPR – ETL Pandémies 
+## 5. Installation rapide
+
+```bash
+# 1. Préparer l'ETL
+cd ETL
+python -m venv venv
+venv\Scripts\activate  # ou source venv/bin/activate
+pip install -r requirements.txt
+
+# 2. Préparer la BDD
+cd ../BDD
+npm install
+
+# 3. Préparer la base PostgreSQL et le .env
+# (voir BDD/README.md)
+
+# 4. Générer les données transformées
+cd ../ETL
+python scripts/01_extract.py
+python scripts/02_profile.py
+python scripts/03_transform.py
+
+# 5. Charger les données dans la base
+cd ../BDD
+npx prisma db push
+npm run load
+
+# 6. Lancer l'API
+cd ../API
+npm install
+npm start
+```
+
+---
+
+## 6. Points forts du projet
+
+- **Pipeline complet et automatisé** (ETL → BDD → API)
+- **Documentation professionnelle** à chaque étape
+- **Qualité, robustesse et traçabilité** des données
+- **API RESTful** documentée et testable en direct
+
+---
+
+## 7. Ressources
+
+- [Documentation ETL](ETL/README.md)
+- [Documentation BDD](BDD/README.md)
+- [Documentation API](API/README.md)
+- [Swagger UI](http://localhost:3000/api-docs) (après lancement de l'API)

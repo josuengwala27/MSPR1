@@ -2,11 +2,15 @@
   "name": "pandemies-bdd",
   "version": "1.0.0",
   "description": "Scripts de gestion et de chargement de la base de données Pandémies (Prisma/PostgreSQL)",
-  "main": "load_data.js",
+  "main": "src/scripts/load_data.js",
   "scripts": {
     "prisma:generate": "prisma generate",
     "prisma:dbpush": "prisma db push",
-    "prisma:studio": "prisma studio"
+    "prisma:studio": "prisma studio",
+    "load": "node src/scripts/load_data.js",
+    "validate": "node src/scripts/validate_db.js",
+    "test": "node tests/test_loading.js",
+    "setup": "npm run prisma:generate && npm run prisma:dbpush"
   },
   "dependencies": {
     "@prisma/client": "^5.12.0",
@@ -14,6 +18,7 @@
     "pandemies-bdd": "file:"
   },
   "devDependencies": {
-    "prisma": "^5.12.0"
+    "prisma": "^5.12.0",
+    "prisma-erd-generator": "^2.0.4"
   }
 }

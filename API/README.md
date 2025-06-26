@@ -94,4 +94,14 @@ POST /api/donnees-historiques
 
 ## Lien avec le projet principal
 
-Cette API utilise le même schéma Prisma que le module BDD via un lien symbolique, garantissant la cohérence des modèles de données. 
+Cette API utilise le même schéma Prisma que le module BDD via un lien symbolique, garantissant la cohérence des modèles de données.
+
+## Documentation automatique (Swagger/OpenAPI)
+
+L'API est entièrement documentée et testable via Swagger UI.
+
+- Accès à la documentation interactive : [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+- Toutes les routes, paramètres, schémas et réponses sont détaillés.
+- Possibilité de tester les requêtes directement depuis l'interface.
+
+Swagger/OpenAPI permet d'assurer la conformité, la maintenabilité et la facilité d'intégration de l'API pour tout développeur ou client. 

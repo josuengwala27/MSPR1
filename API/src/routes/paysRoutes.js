@@ -3,6 +3,23 @@ const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+/**
+ * @swagger
+ * tags:
+ *   name: Pays
+ *   description: Gestion des pays
+ */
+
+/**
+ * @swagger
+ * /api/pays:
+ *   get:
+ *     summary: Liste tous les pays
+ *     tags: [Pays]
+ *     responses:
+ *       200:
+ *         description: Liste des pays
+ */
 // GET tous les pays
 router.get('/', async (req, res) => {
   try {
@@ -13,6 +30,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/pays/{id}:
+ *   get:
+ *     summary: Récupère un pays par ID
+ *     tags: [Pays]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID du pays
+ *     responses:
+ *       200:
+ *         description: Pays trouvé
+ *       404:
+ *         description: Pays non trouvé
+ */
 // GET un pays par ID
 router.get('/:id', async (req, res) => {
   try {
@@ -31,6 +67,25 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/pays/iso/{code}:
+ *   get:
+ *     summary: Récupère un pays par code ISO
+ *     tags: [Pays]
+ *     parameters:
+ *       - in: path
+ *         name: code
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Code ISO du pays
+ *     responses:
+ *       200:
+ *         description: Pays trouvé
+ *       404:
+ *         description: Pays non trouvé
+ */
 // GET un pays par code ISO
 router.get('/iso/:code', async (req, res) => {
   try {
@@ -49,6 +104,36 @@ router.get('/iso/:code', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/pays:
+ *   post:
+ *     summary: Crée un nouveau pays
+ *     tags: [Pays]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - country
+ *               - iso_code
+ *             properties:
+ *               country:
+ *                 type: string
+ *               iso_code:
+ *                 type: string
+ *               population:
+ *                 type: integer
+ *     responses:
+ *       201:
+ *         description: Pays créé
+ *       400:
+ *         description: Données invalides
+ *       409:
+ *         description: Pays ou code ISO existe déjà
+ */
 // POST créer un pays
 router.post('/', async (req, res) => {
   try {
@@ -75,6 +160,42 @@ router.post('/', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/pays/{id}:
+ *   put:
+ *     summary: Met à jour un pays
+ *     tags: [Pays]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID du pays
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               country:
+ *                 type: string
+ *               iso_code:
+ *                 type: string
+ *               population:
+ *                 type: integer
+ *     responses:
+ *       200:
+ *         description: Pays mis à jour
+ *       400:
+ *         description: Données invalides
+ *       404:
+ *         description: Pays non trouvé
+ *       409:
+ *         description: Code ISO déjà utilisé
+ */
 // PUT mettre à jour un pays
 router.put('/:id', async (req, res) => {
   try {
@@ -107,6 +228,27 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/pays/{id}:
+ *   delete:
+ *     summary: Supprime un pays
+ *     tags: [Pays]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID du pays
+ *     responses:
+ *       204:
+ *         description: Pays supprimé
+ *       404:
+ *         description: Pays non trouvé
+ *       409:
+ *         description: Pays référencé dans d'autres données
+ */
 // DELETE supprimer un pays
 router.delete('/:id', async (req, res) => {
   try {

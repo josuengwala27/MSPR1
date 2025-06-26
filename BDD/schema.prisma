@@ -1,4 +1,4 @@
-// Schéma Prisma simplifié pour la base Pandémies (aligné sur les fichiers CSV)
+// Schéma Prisma optimisé pour la base Pandémies (aligné sur les fichiers CSV)
 
 generator client {
   provider = "prisma-client-js"
@@ -14,12 +14,22 @@ model Pays {
   country      String  @db.VarChar(100)
   iso_code     String  @unique @db.Char(3)
   population   BigInt?
+  
+  // Relations
+  donneesHistoriques DonneeHistorique[]
+  
+  @@map("pays")
 }
 
 model Indicateur {
   id_indicateur    Int     @id @default(autoincrement())
   indicator_name   String  @unique @db.VarChar(50)
   description      String?
+  
+  // Relations
+  donneesHistoriques DonneeHistorique[]
+  
+  @@map("indicateur")
 }
 
 model DonneeHistorique {
@@ -36,4 +46,22 @@ model DonneeHistorique {
   deaths_per_100k   Float?
   incidence_7j      Float?
   growth_rate       Float?
-} 
+  
+  // Relations (optionnelles pour compatibilité)
+  pays              Pays?    @relation(fields: [iso_code], references: [iso_code])
+  indicateur        Indicateur? @relation(fields: [indicator], references: [indicator_name])
+  
+  // Index pour performance
+  @@index([date])
+  @@index([country])
+  @@index([indicator])
+  @@index([source])
+  @@index([iso_code])
+  
+  @@map("donnee_historique")
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "./ERD/ERD.svg"
+}

@@ -3,6 +3,34 @@ const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+/**
+ * @swagger
+ * tags:
+ *   name: DonneesHistoriques
+ *   description: Gestion des données historiques
+ */
+
+/**
+ * @swagger
+ * /api/donnees-historiques:
+ *   get:
+ *     summary: Récupère les données historiques (pagination)
+ *     tags: [DonneesHistoriques]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: Numéro de page
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *         description: Nombre d'éléments par page
+ *     responses:
+ *       200:
+ *         description: Liste paginée des données historiques
+ */
 // GET toutes les données historiques (avec pagination)
 router.get('/', async (req, res) => {
   try {
@@ -34,6 +62,59 @@ router.get('/', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/donnees-historiques/filtre:
+ *   get:
+ *     summary: Filtre les données historiques
+ *     tags: [DonneesHistoriques]
+ *     parameters:
+ *       - in: query
+ *         name: pays
+ *         schema:
+ *           type: string
+ *         description: Nom du pays
+ *       - in: query
+ *         name: iso_code
+ *         schema:
+ *           type: string
+ *         description: Code ISO
+ *       - in: query
+ *         name: indicator
+ *         schema:
+ *           type: string
+ *         description: Indicateur
+ *       - in: query
+ *         name: dateDebut
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: Date de début
+ *       - in: query
+ *         name: dateFin
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: Date de fin
+ *       - in: query
+ *         name: source
+ *         schema:
+ *           type: string
+ *         description: Source
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: Numéro de page
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *         description: Nombre d'éléments par page
+ *     responses:
+ *       200:
+ *         description: Liste filtrée des données historiques
+ */
 // GET données historiques filtrées
 router.get('/filtre', async (req, res) => {
   try {
@@ -90,6 +171,50 @@ router.get('/filtre', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/donnees-historiques/pays/{isoCode}:
+ *   get:
+ *     summary: Récupère les données par pays
+ *     tags: [DonneesHistoriques]
+ *     parameters:
+ *       - in: path
+ *         name: isoCode
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Code ISO du pays
+ *       - in: query
+ *         name: indicator
+ *         schema:
+ *           type: string
+ *         description: Indicateur
+ *       - in: query
+ *         name: dateDebut
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: Date de début
+ *       - in: query
+ *         name: dateFin
+ *         schema:
+ *           type: string
+ *           format: date
+ *         description: Date de fin
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: Numéro de page
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *         description: Nombre d'éléments par page
+ *     responses:
+ *       200:
+ *         description: Liste des données historiques pour un pays
+ */
 // GET données historiques par pays
 router.get('/pays/:isoCode', async (req, res) => {
   try {
@@ -140,6 +265,25 @@ router.get('/pays/:isoCode', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/donnees-historiques/{id}:
+ *   get:
+ *     summary: Récupère une donnée par ID
+ *     tags: [DonneesHistoriques]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID de la donnée
+ *     responses:
+ *       200:
+ *         description: Donnée trouvée
+ *       404:
+ *         description: Donnée non trouvée
+ */
 // GET une donnée historique par ID
 router.get('/:id', async (req, res) => {
   try {
@@ -158,6 +302,54 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/donnees-historiques:
+ *   post:
+ *     summary: Crée une nouvelle donnée historique
+ *     tags: [DonneesHistoriques]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - date
+ *               - country
+ *               - indicator
+ *             properties:
+ *               date:
+ *                 type: string
+ *                 format: date
+ *               country:
+ *                 type: string
+ *               value:
+ *                 type: number
+ *               indicator:
+ *                 type: string
+ *               source:
+ *                 type: string
+ *               iso_code:
+ *                 type: string
+ *               population:
+ *                 type: integer
+ *               unit:
+ *                 type: string
+ *               cases_per_100k:
+ *                 type: number
+ *               deaths_per_100k:
+ *                 type: number
+ *               incidence_7j:
+ *                 type: number
+ *               growth_rate:
+ *                 type: number
+ *     responses:
+ *       201:
+ *         description: Donnée créée
+ *       400:
+ *         description: Données invalides
+ */
 // POST créer une donnée historique
 router.post('/', async (req, res) => {
   try {
@@ -205,6 +397,59 @@ router.post('/', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/donnees-historiques/{id}:
+ *   put:
+ *     summary: Met à jour une donnée historique
+ *     tags: [DonneesHistoriques]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID de la donnée
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               date:
+ *                 type: string
+ *                 format: date
+ *               country:
+ *                 type: string
+ *               value:
+ *                 type: number
+ *               indicator:
+ *                 type: string
+ *               source:
+ *                 type: string
+ *               iso_code:
+ *                 type: string
+ *               population:
+ *                 type: integer
+ *               unit:
+ *                 type: string
+ *               cases_per_100k:
+ *                 type: number
+ *               deaths_per_100k:
+ *                 type: number
+ *               incidence_7j:
+ *                 type: number
+ *               growth_rate:
+ *                 type: number
+ *     responses:
+ *       200:
+ *         description: Donnée mise à jour
+ *       400:
+ *         description: Données invalides
+ *       404:
+ *         description: Donnée non trouvée
+ */
 // PUT mettre à jour une donnée historique
 router.put('/:id', async (req, res) => {
   try {
@@ -256,6 +501,25 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/donnees-historiques/{id}:
+ *   delete:
+ *     summary: Supprime une donnée historique
+ *     tags: [DonneesHistoriques]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID de la donnée
+ *     responses:
+ *       204:
+ *         description: Donnée supprimée
+ *       404:
+ *         description: Donnée non trouvée
+ */
 // DELETE supprimer une donnée historique
 router.delete('/:id', async (req, res) => {
   try {
