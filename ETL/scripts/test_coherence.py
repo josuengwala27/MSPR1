@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-"""
-Script de test de cohérence ETL
-Auteur: MSPR Project
-Date: 2024
-Description: Vérifie la cohérence entre Extraction et Transformation
-"""
 
 import os
 import sys

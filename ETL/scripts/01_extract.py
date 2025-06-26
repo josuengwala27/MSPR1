@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Script d'extraction automatique des données COVID-19 et MPOX
-Auteur: MSPR Project
-Date: 2024
-Description: Télécharge automatiquement les données depuis les sources officielles
-"""
+
 
 import os
 import sys

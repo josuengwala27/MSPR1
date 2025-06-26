@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-"""
-Script de test pour l'extraction automatisée
-Auteur: MSPR Project
-Date: 2024
-Description: Teste le script d'extraction sans télécharger de gros fichiers
-"""
 
 import sys
 import os
